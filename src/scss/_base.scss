@@ -1,0 +1,292 @@
+.bg-color {
+  background-color: $site-bg;
+}
+
+.white {
+  color: $site-white;
+}
+.yellow {
+  color: $site-yellow;
+}
+.black {
+  color: $site-black;
+}
+
+.arial{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration:underline;
+}
+
+.topleft-0 {
+  left:0px;
+  top:0px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.vis-hid {
+  visibility: hidden;
+}
+
+.vis {
+  visibility: visible;
+}
+
+.overflow-h {
+  overflow: hidden;
+}
+
+.abs {
+  position: absolute;
+}
+
+.abs-00 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.back-top {
+  text-align:center;
+  font-size: 0.8em;
+}
+
+.nav-bar, .footer {
+  background-color:$site-yellow;
+  width: 100%;
+  height: 50px;
+}
+
+.nav-container {
+  position: relative;
+  margin: 0 auto;
+  ul {
+    padding-inline-start: 0px;
+  }
+}
+
+.nav-left {
+  position: absolute;
+  z-index: 100;
+}
+
+.nav-item {
+  list-style: none;
+  text-align: center;
+  a {
+    text-decoration: none;
+  }
+}
+
+.ico{
+  width: 45px;
+  height: auto;
+  padding-top: 0.6em;
+  padding-left: 0.5em;
+}
+
+.footer-txt {
+  padding-top: 1em;
+  text-align: center;
+}
+
+.preload {
+  display: none;
+}
+
+@media (min-width: 1280px){
+  .nav-container {
+    max-width: 1200px;
+
+    a img {
+      border: 0;
+    }
+    a:link, a:visited {
+      color: $site-black;
+    }
+    a:hover {
+      color: $site-white;
+    }
+    a:active {
+      color: red;
+    }
+  }
+  .nav-list {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-item {
+    padding-top: 0.8em;
+    padding-left: 1em;
+  }
+  .nav-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 992px){
+  .nav-container {
+    max-width: 910px;
+
+    a img {
+      border: 0;
+    }
+    a:link, a:visited {
+      color: $site-black;
+    }
+    a:hover {
+      color: $site-white;
+    }
+    a:active {
+      color: red;
+    }
+  }
+  .nav-list {
+    position: relative;
+    display: flex;
+    justify-content: flex-end
+  }
+  .nav-item {
+    padding-top: 0.8em;
+    padding-left: 1em;
+  }
+  .nav-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px){
+  .nav-container {
+    max-width: 710px;
+
+    a img {
+      border: 0;
+    }
+    a:link, a:visited {
+      color: $site-black;
+    }
+    a:hover {
+      color: $site-white;
+    }
+    a:active {
+      color: red;
+    }
+  }
+  .nav-list {
+    position: relative;
+    display: flex;
+    justify-content: flex-end
+  }
+  .nav-item {
+    padding-top: 0.8em;
+    padding-left: 1em;
+  }
+  .nav-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 371px){
+  .nav-container {
+    max-width: 500px;
+    a img {
+      border: 0;
+    }
+    a:link, a:visited {
+      color: $site-white;
+    }
+    a:hover {
+      color: $site-yellow;
+    }
+    a:active {
+      color: red;
+    }
+  }
+  .nav-list {
+    position: relative;
+    display: none;
+    justify-content: flex-end;
+    z-index: 99;
+    justify-content: center;
+    top: 50px;
+    background-image:url("../img/sectionbg.png");
+  }
+  .nav-list-active {
+    display: flex;
+  }
+  .nav-item {
+    padding: 0.8em;
+    flex-grow: 1;
+  }
+  .nav-menu {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    left: 85%;
+    width: 40px;
+    height: 40px;
+    background: url("../img/menu.png") no-repeat;
+  }
+  .nav-menu:hover {
+    background: url("../img/menu_hover.png") no-repeat;
+  }
+}
+
+@media (max-width: 370px){
+  .nav-container {
+    max-width: 300px;
+    a img {
+      border: 0;
+    }
+    a:link, a:visited {
+      color: $site-white;
+    }
+    a:hover {
+      color: $site-yellow;
+    }
+    a:active {
+      color: red;
+    }
+  }
+  .nav-list {
+    position: relative;
+    display: none;
+    justify-content: flex-end;
+    z-index: 99;
+    justify-content: center;
+    top: 50px;
+    background-image:url("../img/sectionbg.png");
+  }
+  .nav-list-active {
+    display: flex;
+  }
+  .nav-item {
+    padding: 0.4em;
+    flex-grow: 1;
+    font-size: 0.8em;
+  }
+  .nav-menu {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    left: 85%;
+    width: 40px;
+    height: 40px;
+    background: url("../img/menu.png") no-repeat;
+  }
+  .nav-menu:hover {
+    background: url("../img/menu_hover.png") no-repeat;
+  }
+}

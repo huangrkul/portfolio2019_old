@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will Huang Portfolio 2019</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="shortcut icon" href="img/icon.png" type="image/png">
+<link rel="icon" href="img/icon.png" type="image/png">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body class="bg-color">
+  <section id="navSection">
+    <div id="navBar" class="nav-bar">
+      <div class="nav-container">
+        <div class="nav-left arial bold white">
+          <a href="https://www.linkedin.com/in/willhuang/" target="_blank"><img id="icoLink" src="img/icon_link.png" class="ico hide"></a>
+          <a href="mailto:huangrkul@gmail.com"><img id="icoEmail" src="img/icon_email.png" class="ico hide"></a>
+        </div>
+        <ul id="navList" class="nav-list">
+          <li id="navItem1" class="nav-item hide"><a href="#sectionContainer2" class="arial bold">ABOUT</a></li>
+          <li id="navItem2" class="nav-item hide"><a href="#sectionContainer3" class="arial bold">BANNERS</a></li>
+          <li id="navItem3" class="nav-item hide"><a href="#sectionContainer4" class="arial bold">WEBSITES</a></li>
+          <li id="navItem4" class="nav-item hide"><a href="#sectionContainer5" class="arial bold">REELS</a></li>
+        </ul>
+        <div id="navMenu" class="nav-menu"></div>
+      </div>
+    </div>
+  </section>
+  <div id="sectionContainer1" w3-include-html="section1.html"></div>
+  <div id="sectionContainer2" w3-include-html="section2.html"></div>
+  <div id="sectionContainer3" w3-include-html="section3.html"></div>
+  <div id="sectionContainer4" w3-include-html="section4.html"></div>
+  <div id="sectionContainer5" w3-include-html="section5.html"></div>
+
+  <section id="footer">
+    <div class="footer">
+      <div class="footer-txt arial black">WILLIAM HUANG ©2019</div>
+    </div>
+  </section>
+  <div class="preload">
+    <img src="img/mr_resume_clicked.gif">
+    <img src="img/logo.png">
+    <img src="img/willsaur.gif">
+    <img src="img/willsaur_wave.gif">
+    <img src="img/willsequence.gif">
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/js_utils.js"></script>
+  <script src="js/scroll_functions.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/scroll_triggers.js"></script>
+  <script src="js/banners.js"></script>
+
+  <script>
+    var isSect1Loaded = false;
+    var isSect2Loaded = false;
+    var isSect3Loaded = false;
+    var isSect4Loaded = false;
+    var isSect5Loaded = false;
+    var areImgsLoaded = false;
+		w3.includeHTML(siteInit);
+    function siteInit() {
+      $(document).ready(function() {
+        $('html, body').hide();
+        checkSections();
+        if(isSect1Loaded && isSect2Loaded && isSect3Loaded && isSect4Loaded && isSect5Loaded){
+          $('html, body').show();
+          init();
+        } else {
+          console.log("w3 retrigger");
+          w3.includeHTML(siteInit);
+        }
+        // if (window.location.hash.length > 0) {
+        //   setTimeout(function() {
+        //     $('html, body').scrollTop(0).show();
+        //     $('html, body').animate({
+        //        scrollTop: $(window.location.hash).offset().top
+        //         }, 1000)
+        //   }, 0);
+		    // }
+	    });
+		}
+    function checkSections () {
+      $("#section1").ready(function() {
+        isSect1Loaded = true;
+      });
+      $("#section2").ready(function() {
+        isSect2Loaded = true;
+      });
+      $("#section3").ready(function() {
+        isSect3Loaded = true;
+      });
+      $("#section4").ready(function() {
+        isSect4Loaded = true;
+      });
+      $("#section5").ready(function() {
+        isSect5Loaded = true;
+      });
+    }
+	</script>
+
+</body>
+</html>
